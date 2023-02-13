@@ -120,7 +120,7 @@ if(flag==1):
 
         
 # Email credentials
-        from_email = "raggarwal1_be20@thapar.edu"
+        from_email = ""
         to_email = Email
         password = "ranzfxsbkhjvkwdx"
 
