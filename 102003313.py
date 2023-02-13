@@ -63,12 +63,13 @@ if st.button('Submit'):
          files.append("Trimed_" + str(i) + ".mp3")
       all_mp3 = [AudioFileClip(file) for file in files]
       combined_audio = concatenate_audioclips(all_mp3)
-      combined_audio.write_audiofile(output)
+      combined_audio.write_audiofile("merged.mp3")
+      
+       def compress_mp3_to_zip(mp3_file_path, zip_file_path):
+           with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
+                zip_file.write(mp3_file_path)
 
-   def compress_mp3_to_zip(output, zip_file_path):
-      with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
-         zip_file.write(output)
-         compress_mp3_to_zip('output', 'music.zip')
+        compress_mp3_to_zip('merged.mp3', 'music.zip')
          flag=1
 
    main()
