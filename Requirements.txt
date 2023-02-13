@@ -1,5 +1,5 @@
 argparse
-moviepy
+Moviepy
 threading
 youtube_dl
 os
