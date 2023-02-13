@@ -2,10 +2,7 @@ argparse
 moviepy
 threading
 youtube_dl
-os
-sys
 streamlit 
-moviepy.editor
 
 
 
