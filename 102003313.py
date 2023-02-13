@@ -1,4 +1,3 @@
-import argparse
 import moviepy
 import threading *
 import youtube_dl *
@@ -12,32 +11,12 @@ import time
 flag=0
 st.title('Mashup:musical_note::musical_note::musical_note:')
 st.write('Made by Radhika')
-name=st.text_input("Singer Name")
-n=int(st.number_input("Number of videos",step=1))
-duration=int(st.number_input("Duration(in seconds)",step=1))
+video_name=st.text_input("Singer Name")
+total=int(st.number_input("Number of videos",step=1))
+time=int(st.number_input("Duration(in seconds)",step=1))
 
 Email=st.text_input("Email id")
 if st.button('Submit'):
-
-#Checking possible errors
-   def main():
-      if len(sys.argv) != 5:
-         print("ERROR : NUMBER OF PARAMETERS")
-         print("USAGE : python 101556.py   'Name_video'   no_of_videos   Duration_video   name_of_output_file ")
-         exit(1)
-      elif (int(sys.argv[2]) <=10):
-         print("ERROR : NO OF VIDEOS")
-         print(" No of videos should be greater than 10")
-         exit(1)
-      elif (int(sys.argv[3]) <=20):
-         print("ERROR : AUDIO DURATION")
-         print(" Audio duration should be greater than 20")
-         exit(1)
-      total = int(sys.argv[2])
-      video_name = sys.argv[1]
-      time = int(sys.argv[3])
-      output = sys.argv[4]
-      Start(total, video_name, time, output)
 
    #To download video
    def download_video( total, video_name):
@@ -67,9 +46,7 @@ if st.button('Submit'):
       audio_clip = AudioFileClip("%d.mp3"%(number))
       trimmed_audio = audio_clip.subclip(0, time)
       trimmed_audio.write_audiofile("Trimed_%d.mp3"%(number))
-         
-
-   def Start( total, video_name, time, output ):
+        
       
    #Calling function to download the video
       download_video(total, video_name)
