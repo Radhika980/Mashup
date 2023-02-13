@@ -1,7 +1,7 @@
 import argparse
 #import moviepy
 import threading
-import youtube_dl
+import youtube_dl *
 import os
 import sys
 import zipfile
