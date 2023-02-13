@@ -7,7 +7,28 @@ import zipfile
 from moviepy.editor import VideoFileClip, AudioFileClip, concatenate_audioclips
 import streamlit as st
 import time
+import glob
 
+# Get a list of all files in the folder
+folder = os.getcwd()
+files = glob.glob(folder + "/*")
+
+# Count the number of MP3 and MP4 files in the list
+mp3_files = [f for f in files if f.endswith(".mp3")]
+mp4_files = [f for f in files if f.endswith(".mp4")]
+
+if(len(mp3_files)>0):
+    folder=os.getcwd()
+    for file in glob.glob(os.path.join(folder, '*.mp3')):
+        os.remove(file)
+    
+if(len(mp4_files)>0):
+    folder=os.getcwd()
+    for file in glob.glob(os.path.join(folder, '*.mp4')):
+        os.remove(file)
+         
+         
+         
 flag=0
 st.title('Mashup:musical_note::musical_note::musical_note:')
 st.write('Made by Radhika')
@@ -73,6 +94,14 @@ if st.button('Submit'):
          flag=1
 
    main()
+   #############################################################
+        progress_text = "Operation in progress. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+
+        for percent_complete in range(100):
+            time.sleep(0.1)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+#############################################################
 
 if(flag==1):
         with open("music.zip", "rb") as fp:
