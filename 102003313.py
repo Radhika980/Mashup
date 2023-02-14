@@ -1,8 +1,10 @@
 
 
 import moviepy
-import threading *
-import youtube_dl *
+import threading 
+import youtube_dl 
+from threading import *
+from youtube_dl import *
 import os
 import sys
 import zipfile
