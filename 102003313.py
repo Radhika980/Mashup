@@ -1,3 +1,5 @@
+!pip install --upgrade pip
+
 import moviepy
 import threading *
 import youtube_dl *
