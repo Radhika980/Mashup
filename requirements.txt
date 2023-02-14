@@ -1,6 +1,6 @@
 argparse
 moviepy
-threading
+thread6
 youtube_dl
 streamlit 
 
