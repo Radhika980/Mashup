@@ -90,21 +90,21 @@ if st.button('Submit'):
       combined_audio = concatenate_audioclips(all_mp3)
       combined_audio.write_audiofile("merged.mp3")
       
-       def compress_mp3_to_zip(mp3_file_path, zip_file_path):
-           with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
-                zip_file.write(mp3_file_path)
+   def compress_mp3_to_zip(mp3_file_path, zip_file_path):
+      with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
+            zip_file.write(mp3_file_path)
 
-        compress_mp3_to_zip('merged.mp3', 'music.zip')
-         flag=1
+   compress_mp3_to_zip('merged.mp3', 'music.zip')
+   flag=1
 
-   main()
-   #############################################################
-        progress_text = "Operation in progress. Please wait."
-        my_bar = st.progress(0, text=progress_text)
+main()
+#############################################################
+progress_text = "Operation in progress. Please wait."
+my_bar = st.progress(0, text=progress_text)
 
-        for percent_complete in range(100):
-            time.sleep(0.1)
-            my_bar.progress(percent_complete + 1, text=progress_text)
+for percent_complete in range(100):
+   time.sleep(0.1)
+   my_bar.progress(percent_complete + 1, text=progress_text)
 #############################################################
 
 if(flag==1):
