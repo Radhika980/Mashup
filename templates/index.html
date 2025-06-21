@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <title>Max number</title>
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{url_for('static', filename='style.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+    integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <h1 align="center">Radhika</h1>
+  <div>
+    <form class="pure-form" method="POST" action="/" align="center">
+      Singer Name:
+      <input type="text" name="singer_name" required /><br /><br />
+
+      No. of videos:
+      <input type="number" name="num_videos" required /><br /><br />
+
+      Duration of each audio:
+      <input type="number" name="duration" required /><br /><br />
+
+      Email-Id:
+      <input type="email" name="email" placeholder="Email-Id" required /><br />
+      <button
+        class="pure-button pure-button-primary"
+        type="submit"
+        value="Submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <div>
+    {% if singer and num_videos and duration and email %}
+    <p>
+      Singer is {{singer}}<br />
+      No of videos is {{num_videos}}<br />
+      Duration is {{duration}}<br />
+      Email is {{email}}<br />
+      <h1>Email sent</h1>
+    </p>
+    {%endif%}
+  </div>
+</body>
