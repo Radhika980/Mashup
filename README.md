@@ -20,8 +20,7 @@ This Python program allows users to download YouTube videos, convert them into a
 
 ## Installation
 
-1. Clone the repository to your local machine: git clone https://github.com/your_username/YouTube-Video-to-Audio-Converter.git
-
+1. Clone the repository to your local machine
 
 2. Enter the following information when prompted:
    - Favorite singer's name
@@ -33,7 +32,4 @@ This Python program allows users to download YouTube videos, convert them into a
 
 4. Check your email for the zip file containing the combined audio file.
 
-## Contributors
-
-- Jashan Walia <walia.jashan3@gmail.com>
 
